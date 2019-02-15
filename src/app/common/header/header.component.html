@@ -1,0 +1,42 @@
+<div #header class="header">
+  <div class="header-item">
+    <p class="label">DENYS PANOV</p>
+  </div>
+  <div class="blog_search_container">
+    <i class="fas fa-search"></i>
+    <input class="blog_search_input" type="text">
+  </div>
+  <div class="blog_auth_container sign">
+    <a [routerLink]="['/']" class="blog_auth_link">Sign in</a>
+  </div>
+  <div class="blog_auth_container log">
+    <a [routerLink]="['/']" class="blog_auth_link">Log in</a>
+  </div>
+  <div class="blog_mobile_drop_down_container">
+    <div class="blog_align_right">
+      <i *ngIf="!dropDownOpened; else dropDownClosed"
+         (click)="openDropDown()"
+         class="fas fa-bars"></i>
+      <ng-template #dropDownClosed>
+        <i (click)="closeDropDown()"
+           class="fas fa-times"></i>
+      </ng-template>
+    </div>
+    <div #dropdown class="dropdown">
+      <div class="dropdown_item">
+        <input type="text"
+               class="dropdown_item_search">
+      </div>
+      <div class="dropdown_item">
+        <a [routerLink]="['/']" class="dropdown_item_link">
+          Sign in
+        </a>
+      </div>
+      <div class="dropdown_item">
+        <a [routerLink]="['/']" class="dropdown_item_link">
+          Log in
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
