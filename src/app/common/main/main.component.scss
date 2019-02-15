@@ -1,0 +1,66 @@
+@import "~src/assets/scss/colors";
+@import "~src/assets/scss/styleClasses";
+
+@mixin font($size, $color) {
+  color: $color;
+  font-family: Roboto, Roboto-Bold, sans-serif;
+  font-size: $size;
+}
+
+.blog_main_container {
+  width: 100%;
+  display: grid;
+  padding: 1rem;
+  box-sizing: border-box;
+  grid-template-columns: 1fr;
+  grid-row-gap: 2rem;
+
+  .blog_card {
+    background-color: whitesmoke;
+
+    box-sizing: padding-box;
+    padding: 1rem;
+    text-overflow: ellipsis;
+
+    &:hover {
+      -webkit-box-shadow: 0 2px 5px -1px rgba(0, 0, 0, 0.75);
+      -moz-box-shadow: 0 2px 5px -1px rgba(0, 0, 0, 0.75);
+      box-shadow: 0 2px 5px -1px rgba(0, 0, 0, 0.75);
+    }
+
+    .blog_card_title {
+      @include font(1.2rem, $blog_green);
+      margin-bottom: 0.25rem;
+      max-width: 100%;
+    }
+    .blog_card_text {
+      @include font(1rem, $blog_green_selected);
+      margin: 0;
+      max-width: 100%;
+      max-height: 4rem;
+      overflow: hidden;
+    }
+  }
+}
+
+@media only screen and (min-width: 450px) {
+  .blog_main_container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 1rem;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .blog_main_container {
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 1rem;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .blog_main_container {
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 1rem;
+  }
+}
+

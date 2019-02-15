@@ -1,6 +1,12 @@
 <app-header></app-header>
 
-<div *ngFor="let text of texts">
-  <h3>{{text.label}}</h3>
-  <p>{{text.text}}</p>
+<div class="blog_main_container">
+  <div class="blog_card"
+       *ngFor="let text of texts">
+    <img src="../../../assets/images/blog_logo.jpeg" alt="" class="blog_image_fluid">
+    <h3 class="blog_card_title">{{text.label}}</h3>
+    <p class="blog_card_text">{{text.text}}</p>
+  </div>
 </div>
+
+
