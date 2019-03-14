@@ -1,0 +1,133 @@
+@import "~src/assets/scss/colors";
+@import "~src/assets/scss/styleClasses";
+
+.footer {
+  width: 100%;
+  margin: 0;
+  background-color: $blog_green_selected;
+  color: $blog_yellow;
+  display: grid;
+
+  .brand {
+    grid-area: brand;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    .brand_text {
+      @include font(1.8rem, $blog_yellow);
+    }
+  }
+  .pages {
+    grid-area: pages;
+    padding: 1rem;
+    overflow: hidden;
+    .pages_title {
+      @include font(1rem, $blog_yellow);
+      margin-bottom: 0.25rem;
+    }
+    .pages_link {
+      display: block;
+      width: 100%;
+      @include font(1rem, $blog_yellow);
+      margin: 0;
+      text-decoration: none;
+      transition: 0.2s;
+    }
+    .pages_link:hover {
+      color: yellow;
+    }
+  }
+  .account {
+    grid-area: account;
+    box-sizing: border-box;
+    padding: 2rem 1rem;
+    .account_text {
+      @include font(1rem, $blog_yellow);
+      margin-bottom: 0.25rem;
+      margin-top: 0.25rem;
+      &:hover {
+        color: yellow;
+      }
+    }
+  }
+  .follow {
+    grid-area: follow;
+
+    box-sizing: border-box;
+    padding: 1rem;
+
+    .follow_text {
+      margin-top: 0.5rem;
+      @include font(1rem, $blog_yellow);
+    }
+    .social_panel {
+      width: 100%;
+      margin-bottom: 1rem;
+      .fab {
+        font-size: 2rem;
+        margin-right: 1rem;
+
+        transition: 0.2s;
+        &:hover {
+          transform: scale(1.15);
+          &.fa-twitter {
+            color: deepskyblue;
+          }
+          &.fa-facebook-f {
+            color: #535fe8;
+          }
+          &.fa-youtube {
+            color: red;
+          }
+          &.fa-instagram {
+            color: black;
+          }
+        }
+      }
+    }
+  }
+
+  .rights {
+    grid-area: rights;
+    width: 100%;
+
+    background-color: #004031;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+
+    .rights_text {
+      @include font(0.825rem, $blog_yellow);
+    }
+  }
+}
+
+
+@media only screen and (min-width: 100px) and (max-width: 600px) {
+  .footer {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-areas: "brand" "follow" "pages" "account" "rights";
+  }
+}
+
+
+@media only screen and (min-width: 600px) and (max-width: 900px) {
+  .footer {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "brand follow"
+    "pages account"
+    "rights rights";
+    .pages {
+      padding-left: 15%;
+    }
+  }
+}
+
+
+@media only screen and (min-width: 900px) {
+  .footer {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: "brand pages account follow" "rights rights rights rights";
+  }
+}

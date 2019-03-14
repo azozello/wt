@@ -1,0 +1,46 @@
+@import "~src/assets/scss/colors";
+@import "~src/assets/scss/styleClasses";
+
+
+.comment {
+  width: 70%;
+  margin-right: 15%;
+  margin-left: 15%;
+}
+
+.check {
+  position: relative;
+  box-sizing: border-box;
+  left: 10rem;
+  top: 10rem;
+  width: 2rem;
+  height: 2rem;
+  border: 0.2rem solid $blog_green_selected;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.2s;
+  .check_line {
+    position: absolute;
+    width: 1.2rem;
+    height: 0.2rem;
+    transition: 0.2s;
+    background-color: $blog_green_selected;
+  }
+  .check_done {
+    position: absolute;
+    width: 1.2rem;
+    height: 3px;
+    transition: 0.2s;
+    background-color: $blog_green_selected;
+  }
+  &:hover {
+    .check_line {
+      transform: rotate(90deg);
+    }
+    .check_done {
+      opacity: 100%;
+    }
+  }
+}

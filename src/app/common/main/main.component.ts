@@ -13,7 +13,7 @@ export class MainComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    range(1, 20).subscribe(
+    range(1, 5).subscribe(
       number => {
         this.texts.push({
           label: `Label number #${number}`,

@@ -47,15 +47,16 @@
     margin-left: 0.75rem;
     display: inline-block;
     font-size: 0.875rem;
-    max-width: 12rem;
     border: 1px solid $blog_green;
     outline: none;
     color: $blog_green_selected;
+    width: 8rem;
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    transition: all .2s ease;
     &:focus {
-      width: 100%;
-      -webkit-box-shadow: 0 2px 5px -1px rgba(0, 0, 0, 1);
-      -moz-box-shadow: 0 2px 5px -1px rgba(0, 0, 0, 1);
-      box-shadow: 0 2px 5px -1px rgba(0, 0, 0, 1);
+      transform: scaleY(1.2);
+      width: 12rem;
     }
   }
 }
@@ -117,6 +118,7 @@
         border: 2px solid $blog_green;
         outline: none;
         color: $blog_green_selected;
+        transition: all .3s ease;
         &:focus {
           width: 100%;
           border-color: $blog_green_selected;

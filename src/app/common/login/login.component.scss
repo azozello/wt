@@ -1,0 +1,80 @@
+@import "~src/assets/scss/colors";
+@import "~src/assets/scss/styleClasses";
+
+.background {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: url("../../../assets/images/login_back.png");
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .login_card {
+    width: 30rem;
+    height: 20rem;
+
+    box-sizing: border-box;
+    padding: 5rem;
+    border-radius: 0;
+
+    background-color: rgba(0, 0, 0, 0.4);
+
+    display: grid;
+    grid-template-columns: 1fr;
+
+    .login_container {
+      display: flex;
+      justify-content: space-between;
+
+      .login_link {
+        font-family: Arial, Helvetica, freesans, sans-serif;
+        font-size: 1rem;
+        color: #cd1438;
+        text-decoration: none;
+        &:hover {
+          color: #f51747;
+        }
+      }
+    }
+
+    .input {
+      width: 100%;
+      display: block;
+      background-color: transparent;
+
+      border: none;
+      outline: none;
+      box-shadow: none;
+
+      font-size: 1.25rem;
+      color: #cd1438;
+
+      border-bottom: 2px solid #cd1438;
+    }
+
+    .input:focus + .label {
+      transform: translate(-12%, -200%) scale(0.75);
+    }
+
+    .label {
+      display: block;
+      margin: 0;
+      font-family: Arial, Helvetica, freesans, sans-serif;
+      font-size: 1.125rem;
+      transform: translateY(-120%);
+      transition: 0.2s;
+      color: #cd1438;
+    }
+  }
+}
+
+
+@media only screen and (min-width: 300px) and (max-width: 600px){
+  .background {
+    .login_card {
+      padding: 5rem 1.5rem;
+    }
+  }
+}
