@@ -1,0 +1,171 @@
+<form action="index.php">
+  <div class="page">
+    <div class="header">
+      <h2>Section header</h2>
+    </div>
+    <div class="table">
+      <details>
+        <summary>
+          All the articles
+        </summary>
+        <bdo dir="rtl">Here you can see all the articles in my Blog</bdo>
+      </details>
+      <ul>
+        <li>
+          <a title="The Simplicity of Parallax"
+             href="articles/article1.html">Article 1</a>
+        </li>
+        <li>
+          <a title="Angular 6 Animations From Scratch"
+             href="articles/article2.html">Article 2</a>
+        </li>
+        <li>
+          <a title="A Simple React Router v4 Tutorial"
+             href="articles/article3.html">Article 3</a>
+        </li>
+        <li>
+          <a title="A Simple React Router v4 Tutorial"
+             href="bs/bs-atricle.html">Bootstrap Article</a>
+        </li>
+      </ul>
+      <ul class="beard">
+        <li class="beard-item">
+          <a class="beard-link"
+             href="articles.html">Main</a>
+        </li>
+        <li class="beard-item">/</li>
+      </ul>
+    </div>
+    <div class="image">
+      <ul id="myUL">
+        <li><span class="caret open"></span>
+          <a class="beard-link" href="articles.html">Articles</a>
+          <ul class="nested active">
+            <li><a class="beard-link" href="articles/article1.html">Article 1</a></li>
+            <li><a class="beard-link" href="articles/article2.html">Article 2</a></li>
+            <li><a class="beard-link" href="articles/article3.html">Article 3</a></li>
+            <li><a class="beard-link" href="bs/bs-atricle.html">Bootstrap article</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="article">
+      <fieldset>
+        <legend>
+          časť o článku
+        </legend>
+        <div>
+          <label for="nazov"
+                 class="required">názov článku</label>
+          <input type="text"
+                 pattern="^[a-zA-Z][a-zA-Z0-9 ]*$"
+                 id="nazov"
+                 title="Should starts with letter"
+                 spellcheck="true"
+                 required>
+        </div>
+
+        <div>
+          <label for="obrazok">Obrazok</label>
+          <input type="file"
+                 spellcheck="false"
+                 id="obrazok">
+        </div>
+
+        <div>
+          <label for="url_obrazka">Url obrazku</label>
+          <input type="url"
+                 spellcheck="false"
+                 id="url_obrazka">
+        </div>
+
+        <div>
+          <label for="datum">Datum</label>
+          <input type="date"
+                 id="datum">
+        </div>
+
+        <div>
+          <input type="radio"
+                 name="radio"
+                 id="radio_obrazok">
+          <label for="radio_obrazok">nahraný obrázok</label>
+        </div>
+
+        <div>
+          <input type="radio"
+                 name="radio"
+                 id="radio_url">
+          <label for="radio_url">zadanú url</label>
+        </div>
+
+        <div>
+          <label for="text"
+                 class="required">hlavný text článk</label>
+          <textarea name="text"
+                    id="text"
+                    cols="100"
+                    rows="20"
+                    spellcheck="true"
+                    required></textarea>
+        </div>
+
+        <label for="words">kľúčové slová:</label>
+        <input list="wordsList"
+               id="words"
+               spellcheck="false"
+               name="words"/>
+
+        <datalist id="wordsList">
+          <option value="Tags">
+          <option value="Clanok">
+          <option value="Este daco">
+          <option value="Je viem?">
+          <option value="Naco?">
+        </datalist>
+      </fieldset>
+    </div>
+    <div class="form">
+      <fieldset>
+        <legend>Všetko ostatné</legend>
+        <div>
+          <label for="meno"
+                 class="required">meno autora</label>
+          <input type="text"
+                 id="meno"
+                 spellcheck="false"
+                 required>
+        </div>
+
+        <div>
+          <label for="email">Email</label>
+          <input type="text"
+                 id="email">
+        </div>
+        <div>
+          <input type="submit"
+                 value="submit">
+          <input type="reset"
+                 value="reset">
+        </div>
+      </fieldset>
+    </div>
+    <div class="spin">
+      <footer>
+        <svg xmlns="http://www.w3.org/2000/svg"
+             class="rotating"
+             fill="blue"
+             viewBox="0 0 64 64"
+             width="300" height="300">
+          <g id="outline">
+            <path d="M32,2A30,30,0,1,0,62,32,30.034,30.034,0,0,0,32,2ZM59.975,33a27.9,27.9,0,0,1-7.5,18.066l-1.773-1.773-1.414,1.414,1.773,1.773A27.9,27.9,0,0,1,33,59.975V57H31v2.975a27.9,27.9,0,0,1-18.066-7.5l1.773-1.773-1.414-1.414L11.52,51.066A27.9,27.9,0,0,1,4.025,33H7V31H4.025A27.9,27.9,0,0,1,11.52,12.934l1.773,1.773,1.414-1.414L12.934,11.52A27.9,27.9,0,0,1,31,4.025V7h2V4.025A27.9,27.9,0,0,1,51.066,11.52l-1.773,1.773,1.414,1.414,1.773-1.773A27.9,27.9,0,0,1,59.975,31H57v2Z"></path>
+            <path fill="red"
+                  d="M32,28a4,4,0,1,0,4,4A4,4,0,0,0,32,28Zm0,6a2,2,0,1,1,2-2A2,2,0,0,1,32,34Z"></path>
+            <path d="M32,13A19,19,0,1,0,51,32,19.021,19.021,0,0,0,32,13ZM36,15.5a16.868,16.868,0,0,1,4.691,1.921L36,22.107Zm-8,0v6.612l-4.691-4.691A16.868,16.868,0,0,1,28,15.5ZM17.416,23.309,22.107,28H15.5A16.868,16.868,0,0,1,17.416,23.309ZM15.5,36h6.612l-4.691,4.691A16.868,16.868,0,0,1,15.5,36ZM28,48.505a16.868,16.868,0,0,1-4.691-1.921L28,41.893Zm8,0V41.893l4.691,4.691A16.868,16.868,0,0,1,36,48.505Zm6.373-3.067-6.666-6.667A1,1,0,0,0,34,39.479v9.393a15.689,15.689,0,0,1-4,0V39.479a1,1,0,0,0-1.707-.708l-6.666,6.667a17.1,17.1,0,0,1-3.065-3.065l6.667-6.666A1,1,0,0,0,24.521,34H15.128a15.689,15.689,0,0,1,0-4h9.393a1,1,0,0,0,.708-1.707l-6.667-6.666a17.1,17.1,0,0,1,3.065-3.065l6.666,6.667a1,1,0,0,0,.707.292.987.987,0,0,0,.383-.076A1,1,0,0,0,30,24.521V15.128a15.689,15.689,0,0,1,4,0v9.393a1,1,0,0,0,.617.924.987.987,0,0,0,.383.076,1,1,0,0,0,.707-.292l6.666-6.667a17.1,17.1,0,0,1,3.065,3.065l-6.667,6.666A1,1,0,0,0,39.479,30h9.393a15.689,15.689,0,0,1,0,4H39.479a1,1,0,0,0-.708,1.707l6.667,6.666A17.1,17.1,0,0,1,42.373,45.438Zm4.211-22.129A16.868,16.868,0,0,1,48.505,28H41.893ZM48.505,36a16.868,16.868,0,0,1-1.921,4.691L41.893,36Z"></path>
+            <path d="M32,9A23,23,0,1,0,55,32,23.026,23.026,0,0,0,32,9Zm0,44A21,21,0,1,1,53,32,21.024,21.024,0,0,1,32,53Z"></path>
+          </g>
+        </svg>
+      </footer>
+    </div>
+  </div>
+</form>

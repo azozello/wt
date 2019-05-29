@@ -1,0 +1,205 @@
+body {
+  margin: 0;
+  color: blue;
+  font-family: Arial, sans-serif;
+  font-size: 1rem;
+}
+
+h2 {
+  margin: 0;
+  text-shadow: #000000 10px -5px 1px
+}
+
+textarea {
+  width: 80%;
+}
+
+li {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+a {
+  display: block;
+  font-family: "Comic Sans MS", sans-serif;
+  font-size: 1rem;
+  color: fuchsia;
+  transition: .2s;
+  width: 5rem;
+}
+
+summary {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-size: 1.5rem;
+  color: fuchsia;
+}
+
+details {
+  font-family: "Comic Sans MS", sans-serif;
+  font-size: 1.25rem;
+  padding: 1rem;
+  color: yellow;
+}
+
+a:hover {
+  transform: scale(1.1);
+}
+
+.required::before {
+  color: red;
+  font-size: 1.25rem;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  content: '!POVINNé!';
+}
+
+input:invalid {
+  transition: 0.2s;
+  transform: rotate(180deg);
+  background-color: red;
+}
+
+.rotating {
+  animation: rotate 1s linear infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+svg {
+  max-width: 100%;
+}
+
+.page {
+  margin: 0;
+  box-sizing: border-box;
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: "header"
+  "table"
+  "image"
+  "article"
+  "form"
+  "spin";
+}
+
+.header {
+  grid-area: header;
+  width: 100%;
+  background-color: crimson;
+  box-sizing: border-box;
+  padding: 0.5rem 1rem;
+
+  color: fuchsia;
+  font-size: 2rem;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+.table {
+  grid-area: table;
+  width: 100%;
+  background-color: aqua;
+}
+
+.image {
+  grid-area: image;
+  width: 100%;
+  min-height: 5rem;
+  background-image: url("../../../assets/images/image.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-sizing: border-box;
+  padding: 1rem;
+}
+
+.article {
+  grid-area: article;
+  width: 100%;
+  background-color: teal;
+}
+
+.form {
+  grid-area: form;
+  width: 100%;
+  background-color: darkviolet;
+}
+
+.spin {
+  grid-area: spin;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.beard {
+  display: flex;
+  margin-left: 1rem;
+  color: blue;
+  font-size: 1.25rem;
+  list-style-type: none;
+  padding: 0;
+}
+
+.beard-item {
+  padding: 0.25rem;
+  list-style-type: none;
+}
+
+.beard-link {
+  color: blue;
+  text-decoration: none;
+  width: auto;
+  transform: none;
+}
+
+.beard-link:hover {
+  transform: none;
+  color: black;
+}
+
+ul, #myUL {
+  list-style-type: none;
+}
+
+#myUL {
+  margin: 0;
+  padding: 0;
+}
+
+.nested {
+  display: none;
+}
+
+.active {
+  display: block;
+}
+
+@media (min-width: 600px) and (max-width: 899px){
+  .page {
+    grid-template-columns: 1fr 1fr;
+
+    grid-template-areas: "header header"
+    "table image"
+    "article article"
+    "form form"
+    "spin spin";
+  }
+}
+
+@media (min-width: 900px) {
+  .page {
+    grid-template-columns: 1fr 1fr 1fr;
+
+    grid-template-areas: "header header header"
+    "table image spin"
+    "article article article"
+    "form form form";
+  }
+}

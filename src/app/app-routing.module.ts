@@ -5,8 +5,13 @@ import {ProfileComponent} from './common/profile/profile.component';
 import {PageComponent} from './common/page/page.component';
 import {LoginComponent} from './common/login/login.component';
 import {RegisterComponent} from './common/register/register.component';
+import {CoreckoComponent} from "./common/corecko/corecko.component";
 
 const routes: Routes = [
+  {
+    path: 'corecko',
+    component: CoreckoComponent
+  },
   {
     path: 'page',
     component: PageComponent

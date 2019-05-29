@@ -11,6 +11,7 @@ import { PageComponent } from './common/page/page.component';
 import { CommentComponent } from './common/comment/comment.component';
 import { LoginComponent } from './common/login/login.component';
 import { RegisterComponent } from './common/register/register.component';
+import { CoreckoComponent } from './common/corecko/corecko.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { RegisterComponent } from './common/register/register.component';
     PageComponent,
     CommentComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    CoreckoComponent
   ],
   imports: [
     BrowserModule,
